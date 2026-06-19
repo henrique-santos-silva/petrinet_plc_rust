@@ -1,0 +1,13 @@
+# Workspace root for the Rust rewrite of petrinet_plc.
+#
+# - protocol: shared WebSocket message types (used by backend and frontend)
+# - backend:  the PLC engine + axum web server
+# - frontend: the Leptos WASM single-page app
+#
+# The frontend targets wasm32 and is built with `trunk`; it is intentionally
+# excluded from the default workspace members so `cargo test` (native) does not
+# try to build it for the host target.
+[workspace]
+resolver = "2"
+members = ["protocol", "backend"]
+exclude = ["frontend"]

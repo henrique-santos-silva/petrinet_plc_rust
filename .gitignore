@@ -1,0 +1,13 @@
+# Rust build artifacts
+/target
+/frontend/target
+
+# Trunk WASM build output
+/frontend/dist
+
+# Runtime: persisted uploaded Petri net
+/backend/webserver_ihm_uploaded_IOPT
+
+# Editor / OS
+*.swp
+.DS_Store
